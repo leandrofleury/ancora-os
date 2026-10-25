@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#172e37" />
+  <meta name="description" content="Um espaço simples para priorizar, focar, retomar tarefas e revisar o que aprendeu." />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="./icons/icon-192.png" type="image/png" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Âncora OS — Seu espaço de foco</title>
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">◈</span><div><strong>Âncora OS</strong><span>Um passo de cada vez.</span></div></div>
+      <nav id="navigation" aria-label="Navegação principal">
+        <button class="nav-button selected" data-page="hoje"><span>▦</span> Hoje</button>
+        <button class="nav-button" data-page="foco"><span>◉</span> Foco</button>
+        <button class="nav-button" data-page="memoria"><span>✦</span> Memória</button>
+        <button class="nav-button" data-page="captura"><span>▤</span> Captura rápida</button>
+        <button class="nav-button" data-page="dados"><span>⚙</span> Dados</button>
+      </nav>
+      <div class="sidebar-foot"><span class="status-dot"></span> Offline e privado<br /><small>Dados só neste navegador</small></div>
+    </aside>
+    <main id="app" class="main">
+      <div class="loading">Preparando seu espaço...</div>
+    </main>
+  </div>
+  <nav class="mobile-nav" aria-label="Navegação móvel">
+    <button data-page="hoje">▦<span>Hoje</span></button>
+    <button data-page="foco">◉<span>Foco</span></button>
+    <button data-page="memoria">✦<span>Memória</span></button>
+    <button data-page="captura">▤<span>Captura</span></button>
+    <button data-page="dados">⚙<span>Dados</span></button>
+  </nav>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
